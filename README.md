@@ -1,3 +1,3 @@
-﻿# CodeKids
+# CodeKids
+# CodeKids
 
-https://ichlaura.github.io/CodeKids/
