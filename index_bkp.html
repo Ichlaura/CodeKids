@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeKids｜英語で学ぶ子供向けプログラミング教室</title>
     <!-- ✅ SEO -->
@@ -22,87 +21,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "CodeKids",
-        "url": "https://ichlaura.github.io/CodeKids/",
-        "description": "英語で学ぶ子供向けプログラミング教室（4〜16歳）",
-        "areaServed": {
-            "@type": "Country",
-            "name": "Japan"
-        },
-        "inLanguage": "ja",
-        "teaches": ["Scratch", "Python", "Web Programming"],
-        "audience": {
-            "@type": "PeopleAudience",
-            "suggestedMinAge": 4,
-            "suggestedMaxAge": 16
-        }
-        }
-    </script>
-
-    <p class="hidden">
-        子供向け英語プログラミング教室｜オンライン｜Scratch Python｜プログラミング教室　子供｜プログラミング教室安い
-    </p>
-
-    <p class="hidden">
-        英語｜プログラミング|子供｜オンライン|Scratch 英語 子供|子供 プログラミング 英語 教室|英語 プログラミング 子供 オンライン
-    </p>
-
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
+        /* カスタムスクロールバーで遊び心をプラス */
         body::-webkit-scrollbar {
             width: 8px;
         }
         body::-webkit-scrollbar-thumb {
-            background-color: #6366f1;
+            background-color: #6366f1; /* Indigo */
             border-radius: 10px;
         }
     </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800">
-
-<header class="sticky top-0 z-50 bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-        <a href="#" class="text-3xl font-extrabold text-indigo-600 tracking-wider">
-            &lt;CodeKids&gt;
-        </a>
-        <nav class="hidden md:flex space-x-8 font-medium">
-            <a href="#courses" class="hover:text-indigo-600 transition duration-300">コース</a>
-            <a href="#tutors" class="hover:text-indigo-600 transition duration-300">講師紹介</a>
-            <a href="#schedule" class="hover:text-indigo-600 transition duration-300">スケジュールと料金</a>
-            <a href="#contact" class="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600 transition duration-300 shadow-md">
-                今すぐお問い合わせ
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#" class="text-3xl font-extrabold text-indigo-600 tracking-wider">
+                &lt;CodeKids&gt;
             </a>
-        </nav>
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-
-    <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center">
-            <a href="#courses" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">コース</a>
-            <a href="#tutors" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">講師紹介</a>
-            <a href="#schedule" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">スケジュールと料金</a>
-            <a href="#contact" class="block mt-2 px-3 py-2 w-3/4 text-center bg-green-500 text-white rounded-full">
-                今すぐお問い合わせ
-            </a>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#courses" class="hover:text-indigo-600 transition duration-300">コース</a>
+                <a href="#tutors" class="hover:text-indigo-600 transition duration-300">講師紹介</a>
+                <a href="#schedule" class="hover:text-indigo-600 transition duration-300">スケジュールと料金</a>
+                <a href="#contact" class="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600 transition duration-300 shadow-md">今すぐお問い合わせ</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
-    </div>
-</header>
-
-<main>
-
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#courses" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 w-full text-center">コース</a>
+                <a href="#tutors" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 w-full text-center">講師紹介</a>
+                <a href="#schedule" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50 w-full text-center">スケジュールと料金</a>
+                <a href="#contact" class="block px-3 py-2 rounded-full text-white bg-green-500 hover:bg-green-600 transition duration-300 mt-2 w-3/4 text-center">今すぐお問い合わせ</a>
+            </div>
+        </div>
+    </header>
+    <main>
         <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 bg-indigo-50 overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
@@ -125,7 +85,7 @@
                     </div>
                     <div class="lg:col-span-6 mt-12 lg:mt-0 relative">
                         <div class="relative w-full h-80 bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
-                            <iframe src="https://www.youtube-nocookie.com/embed/kCc8FmEb1nY?start=496&autoplay=0&mute=1&loop=1&playlist=kJQMO5MuWRs"
+                            <iframe src="https://www.youtube.com/embed/kCc8FmEb1nY?start=496&autoplay=0&mute=1&loop=1&playlist=kJQMO5MuWRs"
                                 title="CodeKidsの紹介ビデオ" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
                                 class="absolute top-0 left-0 w-full h-full"
@@ -223,15 +183,15 @@
                             <li class="flex items-start">
                                 <span class="text-indigo-600 font-extrabold text-xl mr-3">&gt;</span>
                                 <div>
-                                    <p class="font-bold text-2xl">ブロックプログラミング (対象年齢 5-9歳)</p>
-                                    <p class="text-2l">4:00 PM - 7:00 PM（月－金）30分</p>
+                                    <p class="font-bold">ブロックプログラミング (対象年齢 5-9歳)</p>
+                                    <p class="text-sm">4:00 PM - 7:00 PM（月－金）30分</p>
                                 </div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-indigo-600 font-extrabold text-xl mr-3">&gt;</span>
                                 <div>
-                                    <p class="font-bold text-2xl">Python基礎→応用・Webページ作成(対象年齢 10-16歳)</p>
-                                    <p class="text-2l">4:00 PM - 7:00 PM （月－金）1時間</p>
+                                    <p class="font-bold">Python基礎→応用・Webページ作成(対象年齢 10-14歳)</p>
+                                    <p class="text-sm">4:00 PM - 7:00 PM （月－金）1時間</p>
                                 </div>
                             </li>
                         </ul>
@@ -291,113 +251,105 @@
                 </div>
             </div>
         </section>
-</main>
-
-<footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-        <div>
-            <a href="#" class="text-2xl font-extrabold text-indigo-400">&lt;CodeKids&gt;</a>
-            <p class="mt-4 text-sm text-gray-400">
-                次世代のイノベーターを、１行のコードから育成します。
-            </p>
+    </main>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+            <div>
+                <a href="#" class="text-2xl font-extrabold text-indigo-400 tracking-wider">&lt;CodeKids&gt;</a>
+                <p class="mt-4 text-sm text-gray-400">次世代のイノベーターを、１行のコードから育成します。</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-white">ナビゲーション</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#courses" class="hover:text-indigo-400">コース</a></li>
+                    <li><a href="#tutors" class="hover:text-indigo-400">講師紹介</a></li>
+                    <li><a href="#schedule" class="hover:text-indigo-400">料金とスケジュール</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div class="mt-12 border-t border-gray-700 pt-8 text-center">
-        <p class="text-sm text-gray-800">子供 プログラミング 教室 オンライン
-            英語 プログラミング 子供
-            子供 英語 プログラミング 教室
-            Scratch 英語 教室
-            Python 子供 教室子供 プログラミング 英語 メリット
-            英語で学ぶ プログラミング 子供
-            子供 プログラミング 何歳から
-            子供 プログラミング 親 無理
-            子供 プログラミング 意味ある？
-            英語が苦手 子供 プログラミング
-            習い事 プログラミング 失敗
-            子供 オンライン 教室 不安
-            4歳 プログラミング
-            4歳 Scratch 英語
-            5歳 プログラミング
-            5歳 Scratch 英語
-            6歳 プログラミング
-            6歳 Scratch 英語
-            7歳 プログラミング
-            7歳 Scratch 英語
-            8歳 プログラミング
-            8歳 Scratch 英語
-            9歳 プログラミング
-            9歳 Scratch 英語
-            10歳 プログラミング
-            10歳 Scratch 英語
-            11歳 プログラミング
-            11歳 Scratch 英語
-            12歳 プログラミング
-            12歳 Scratch 英語
-            13歳 プログラミング
-            13歳 Scratch 英語
-            14歳 プログラミング
-            14歳 Scratch 英語
-            小学生 プログラミング 英語
-            中学生 プログラミング 英語
-        </p>
-    </div>
-</footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const registrationForm = document.getElementById('registrationForm');
-    const statusMessage = document.getElementById('statusMessage');
-    const submitButton = document.getElementById('submitButton');
-
-    menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    mobileMenu.querySelectorAll('a').forEach(link =>
-        link.addEventListener('click', () => mobileMenu.classList.add('hidden'))
-    );
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', e => {
-            const target = document.querySelector(anchor.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: target.offsetTop - document.querySelector('header').offsetHeight,
-                    behavior: 'smooth'
+        <div class="mt-12 border-t border-gray-700 pt-8 text-center">
+            <p class="text-sm text-gray-500">&copy; 2025 CodeKids Academy. 無断転載を禁じます。</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('nav a');
+            const registrationForm = document.getElementById('registrationForm');
+            const statusMessage = document.getElementById('statusMessage');
+            const submitButton = document.getElementById('submitButton');
+            // 1. モバイルメニューのトグル (前回からの維持)
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            // 2. リンククリック後にモバイルメニューを非表示にする (前回からの維持)
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            // 3. スムーススクロールを実装 (前回からの維持)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href.length > 1) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+            // 4. *** 新しいフォーム送信ロジック ***
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', async (e) => {
+                    // ページの再読み込みを防ぐ
+                    e.preventDefault();
+                    statusMessage.textContent = '送信中です...';
+                    statusMessage.className = 'mt-4 text-center text-sm font-medium text-indigo-600';
+                    submitButton.disabled = true; // 二重送信防止
+                    // フォームデータをJSONオブジェクトに変換
+                    const formData = new FormData(registrationForm);
+                    const data = Object.fromEntries(formData.entries());
+                    // *** ここがサーバーとの通信ポイントです ***
+                    // 実際には、このURLをメール送信処理を行うサーバーエンドポイントに置き換える必要があります
+                    const API_ENDPOINT = "https://formspree.io/f/xkgqkyjg";
+                    try {
+                        // サーバーへデータを送信
+                        const response = await fetch(API_ENDPOINT, {
+                            method: 'POST',
+                            headers: {
+                                'Accept': 'application/json',
+                            },
+                            body: new FormData(registrationForm)
+                        });
+                        if (response.ok) {
+                            // 成功した場合の処理 (ステータスコード 200-299)
+                            statusMessage.textContent = 'メッセージを送信いたしました。担当者が返信いたしますのでしばしお待ちください。';
+                            statusMessage.className = 'mt-4 text-center text-sm font-bold text-green-600';
+                            registrationForm.reset(); // フォームをクリア
+                        } else {
+                            // サーバー側でエラーが発生した場合の処理
+                            const errorData = await response.json();
+                            statusMessage.textContent = `送信エラー: ${errorData.message || 'サーバーで問題が発生しました。'}`;
+                            statusMessage.className = 'mt-4 text-center text-sm font-bold text-red-600';
+                        }
+                    } catch (error) {
+                        // ネットワークエラーなどが発生した場合の処理
+                        console.error('Fetch Error:', error);
+                        statusMessage.textContent = 'ネットワークエラーにより送信できませんでした。再度お試しください。';
+                        statusMessage.className = 'mt-4 text-center text-sm font-bold text-red-600';
+                    } finally {
+                        submitButton.disabled = false;
+                    }
                 });
             }
         });
-    });
-
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', async e => {
-            e.preventDefault();
-            statusMessage.textContent = '送信中です...';
-            submitButton.disabled = true;
-
-            try {
-                const res = await fetch(registrationForm.action, {
-                    method: 'POST',
-                    body: new FormData(registrationForm),
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (res.ok) {
-                    statusMessage.textContent = '送信完了しました。';
-                    registrationForm.reset();
-                } else {
-                    statusMessage.textContent = '送信エラーが発生しました。';
-                }
-            } catch {
-                statusMessage.textContent = '通信エラーが発生しました。';
-            } finally {
-                submitButton.disabled = false;
-            }
-        });
-    }
-});
-</script>
-
+    </script>
 </body>
 </html>

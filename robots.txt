@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ichlaura.github.io/CodeKids/sitemap.xml
