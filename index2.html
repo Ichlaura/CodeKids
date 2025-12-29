@@ -1,19 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- titulo de sohei  <title>CodeKids｜英語で学ぶ子供向けプログラミング教室</title>-->
     <title>子供向け英語プログラミング教室｜オンライン Scratch・Python【CodeKids】</title>
 
     <!-- ✅ SEO -->
     <meta name="description" content="CodeKidsは4〜16歳向けの英語プログラミング教室。Scratch・Python・Web制作を個別レッスンで学びます。" />
     <link rel="canonical" href="https://ichlaura.github.io/CodeKids/" />
-
- <!-- ✅ verificacion de google  -->
-<meta name="google-site-verification" content="ocG2jrKrWRM7iY_iSBJRhK4PQvGVQCmGG9lKbsfqVS0" />
+    <meta name="google-site-verification" content="ocG2jrKrWRM7iY_iSBJRhK4PQvGVQCmGG9lKbsfqVS0" />
     
     <!-- ✅ Language hint -->
     <meta http-equiv="content-language" content="ja" />
@@ -27,7 +23,9 @@
     <!-- ✅ Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
@@ -51,63 +49,75 @@
 
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
             scroll-behavior: smooth;
         }
         body::-webkit-scrollbar {
-            width: 8px;
+            width: 10px;
         }
         body::-webkit-scrollbar-thumb {
-            background-color: #6366f1;
+            background: linear-gradient(180deg, #2563eb, #06b6d4);
             border-radius: 10px;
+        }
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4, #10b981);
+        }
+        .card-professional {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-professional:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-   
-    <!-- ✅ header antiguo de sohei
-<header class="sticky top-0 z-50 bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-        <a href="#" class="text-3xl font-extrabold text-indigo-600 tracking-wider">
-            &lt;CodeKids&gt;
-        </a> -->
+<body class="bg-white text-gray-900">
 
- <!-- ✅ header nuevo -->
-  <header class="sticky top-0 z-50 bg-white shadow-lg">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm gradient-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-      <a href="#" class="flex items-center gap-3">
-    <img 
-        src="logo-codekids.png.png
-" 
-        alt="CodeKids 子供向けプログラミングスクール ロゴ"
-        class="h-30 w-auto"
-    >
-</a>
-
-        <nav class="hidden md:flex space-x-8 font-medium">
-            <a href="#courses" class="hover:text-indigo-600 transition duration-300">コース</a>
-            <a href="#tutors" class="hover:text-indigo-600 transition duration-300">講師紹介</a>
-            <a href="#schedule" class="hover:text-indigo-600 transition duration-300">スケジュールと料金</a>
-            <a href="#contact" class="px-4 py-2 text-white bg-green-500 rounded-full hover:bg-green-600 transition duration-300 shadow-md">
-                今すぐお問い合わせ
+        <a href="#" class="flex items-center">
+            <img src="logo-codekids.png.png" alt="CodeKids 子供向けプログラミングスクール ロゴ" class="h-12 md:h-14 w-auto">
+        </a>
+        
+        <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+            <a href="#courses" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">コース</a>
+            <a href="#tutors" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">講師紹介</a>
+            <a href="#schedule" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">スケジュールと料金</a>
+            <a href="#contact" class="px-6 py-2.5 text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-md hover:shadow-lg">
+                お問い合わせ
             </a>
         </nav>
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+        
+        <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h16"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center">
-            <a href="#courses" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">コース</a>
-            <a href="#tutors" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">講師紹介</a>
-            <a href="#schedule" class="block px-3 py-2 w-full text-center hover:bg-indigo-50">スケジュールと料金</a>
-            <a href="#contact" class="block mt-2 px-3 py-2 w-3/4 text-center bg-green-500 text-white rounded-full">
-                今すぐお問い合わせ
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div class="px-4 pt-3 pb-4 space-y-2">
+            <a href="#courses" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">コース</a>
+            <a href="#tutors" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">講師紹介</a>
+            <a href="#schedule" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">スケジュールと料金</a>
+            <a href="#contact" class="block mt-3 px-4 py-3 text-center text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg shadow-md">
+                お問い合わせ
             </a>
         </div>
     </div>
@@ -115,160 +125,260 @@
 
 <main>
 
-        <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 bg-indigo-50 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
-                    <div class="lg:col-span-6 text-center lg:text-left">
-                        <span class="text-sm font-semibold uppercase tracking-wider text-indigo-600 bg-indigo-200 py-1 px-3 rounded-full shadow-inner">対象年齢 4-16歳</span>
-                        <h1 class="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
-                            <span class="text-indigo-600">子供向け英語プログラミング教室｜楽しく学ぶオンラインレッスン</span>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-28 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 overflow-hidden">
+    <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] opacity-30"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+            <div class="lg:col-span-6 text-center lg:text-left">
+                <span class="inline-block text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-100 py-1.5 px-4 rounded-full">
+                    対象年齢 4-16歳
+                </span>
+                
+                <h1 class="mt-8 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+                    英語で学ぶ<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">プログラミング教室</span>
+                </h1>
+                
+                <p class="mt-6 text-lg text-gray-600 leading-relaxed max-w-2xl">
+                    クラスでは日本語をほぼ話さず、プログラミングの基礎を一緒に楽しく学ぶことで英語とプログラミングを同時にしっかりと学習することができます。
+                </p>
+                
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#courses" class="px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        コース情報
+                    </a>
+                    <a href="#contact" class="px-8 py-4 text-base font-semibold text-blue-600 bg-white border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-300 shadow-md">
+                        無料体験予約
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-6 mt-16 lg:mt-0">
+                <div class="relative w-full h-80 lg:h-96 bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                    <iframe src="https://www.youtube-nocookie.com/embed/kCc8FmEb1nY?start=496&autoplay=0&mute=1&loop=1&playlist=kJQMO5MuWRs"
+                        title="CodeKidsの紹介ビデオ" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                        class="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                        </h1>
-                        <p class="mt-6 text-xl text-gray-600">
-                            クラスでは日本語をほぼ話さず、プログラミングの基礎を一緒に楽しく学ぶことで英語とプログラミングを同時にしっかりと学習することができます。
-                        </p>
-                        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#courses" class="px-8 py-4 text-lg font-bold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition duration-300 shadow-xl shadow-indigo-300/50 transform hover:scale-[1.02]">
-                                コース情報
-                            </a>
-                            <a href="#contact" class="px-8 py-4 text-lg font-bold text-indigo-600 bg-white border-2 border-indigo-600 rounded-xl hover:bg-indigo-50 transition duration-300 shadow-xl transform hover:scale-[1.02]">
-                                無料体験予約
-                            </a>
+<!-- Why CodeKids Section -->
+<section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">CodeKidsを選ぶ理由</h2>
+            <div class="section-divider mx-auto w-24 my-6"></div>
+            <p class="text-lg text-gray-600">プロフェッショナルな指導で、お子様の未来を切り拓く</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+            <div class="card-professional p-8 rounded-2xl border border-gray-200">
+                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
+                    <span class="text-2xl">📚</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">プロジェクトベース学習</h3>
+                <p class="text-gray-600 leading-relaxed">実際にゲームやアプリを構築し、学んだ概念を即座に応用することで楽しくスキルが定着します。</p>
+            </div>
+            
+            <div class="card-professional p-8 rounded-2xl border border-gray-200">
+                <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center mb-6">
+                    <span class="text-2xl">🌎</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">外国人英語講師</h3>
+                <p class="text-gray-600 leading-relaxed">日本語をほぼ離せない講師の元でプログラミングを学ぶことでおのずと英語、コミュニーケーション能力が培われます。</p>
+            </div>
+            
+            <div class="card-professional p-8 rounded-2xl border border-gray-200">
+                <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
+                    <span class="text-2xl">🧠</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">プライベートレッスン</h3>
+                <p class="text-gray-600 leading-relaxed">グループではなく個人でレッスンをすることで、お子様の学ぶ速度に合わせて学習ができます。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section id="courses" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">コース概要</h2>
+            <div class="section-divider mx-auto w-24 my-6"></div>
+            <p class="text-lg text-gray-600">年齢とスキルに合わせた最適なカリキュラム</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-10">
+            <!-- Scratch Course -->
+            <div class="card-professional rounded-2xl overflow-hidden border border-gray-200">
+                <div class="h-2 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-100 to-orange-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🎮</span>
                         </div>
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">5-9歳</span>
                     </div>
-                    <div class="lg:col-span-6 mt-12 lg:mt-0 relative">
-                        <div class="relative w-full h-80 bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
-                            <iframe src="https://www.youtube-nocookie.com/embed/kCc8FmEb1nY?start=496&autoplay=0&mute=1&loop=1&playlist=kJQMO5MuWRs"
-                                title="CodeKidsの紹介ビデオ" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-                                class="absolute top-0 left-0 w-full h-full"
-                            ></iframe>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">ブロックプログラミング</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">最初のステップに最適。SCRATCHをというツールを使って、簡単なPC操作（ドラッグ＆ドロップ）で対話型ストーリーやゲームを制作します。</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            タイピング不要
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            基本的な論理に集中
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Python Course -->
+            <div class="card-professional rounded-2xl overflow-hidden border border-gray-200">
+                <div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🐍</span>
                         </div>
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">10-16歳</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Python基礎</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">世界で最も人気のある言語。ゲームの作成、データ分析ツール、シンプルな機械学習モデルを構築します。</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            実践的なテキストコーディング
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            中級レベルの概念
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Web Development Course -->
+            <div class="card-professional rounded-2xl overflow-hidden border border-gray-200">
+                <div class="h-2 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg flex items-center justify-center">
+                            <span class="text-2xl">🌐</span>
+                        </div>
+                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wide">10-16歳</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Webページ作成</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">JavaScript,HTML、CSSなどの言語を使用しウェブサイトを作成、サーバー上に実装します。</p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            フルスタックの基礎
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            ポートフォリオにできるプロジェクト
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tutors Section -->
+<section id="tutors" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">講師紹介</h2>
+            <div class="section-divider mx-auto w-24 my-6"></div>
+            <p class="text-lg text-gray-600">経験豊富なプロフェッショナル講師</p>
+        </div>
+        
+        <div class="flex justify-center">
+            <div class="card-professional p-10 rounded-2xl border border-gray-200 max-w-md w-full text-center">
+                <img class="w-28 h-28 mx-auto rounded-full object-cover mb-6 shadow-lg border-4 border-white ring-2 ring-gray-200" 
+                     src="miamor.jpg" 
+                     alt="パオラ先生のプロフィール画像" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/112x112/3b82f6/ffffff?text=P'">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">パオラ先生</h3>
+                <p class="text-blue-600 font-semibold mb-4">Python, JavaScript専門</p>
+                <p class="text-gray-600 leading-relaxed">コロンビアで物理・教育学の学位を取得後、約3年ほどプログラミングの教師として勤務。アメリカには2年ほど在住経験あり</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schedule & Pricing Section -->
+<section id="schedule" class="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">スケジュール料金設定</h2>
+            <div class="section-divider mx-auto w-24 my-6"></div>
+            <p class="text-lg text-gray-600">柔軟なスケジュールとシンプルな料金体系</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+            <div class="card-professional p-10 rounded-2xl border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">柔軟な授業時間</h3>
+                <div class="space-y-6">
+                    <div class="p-6 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-orange-200">
+                        <p class="font-bold text-lg text-gray-900 mb-2">ブロックプログラミング (対象年齢 5-9歳)</p>
+                        <p class="text-gray-700">4:00 PM - 7:00 PM（月－金）30分</p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                        <p class="font-bold text-lg text-gray-900 mb-2">Python基礎→応用・Webページ作成 (対象年齢 10-16歳)</p>
+                        <p class="text-gray-700">4:00 PM - 7:00 PM（月－金）1時間</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-12">CodeKidsを選ぶ理由</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-8 bg-yellow-50 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-yellow-500">
-                        <span class="text-4xl">📚</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">プロジェクトベース学習</h3>
-                        <p class="text-gray-600">実際にゲームやアプリを構築し、学んだ概念を即座に応用することで楽しくスキルが定着します。</p>
+            
+            <div class="card-professional p-10 rounded-2xl border border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8">シンプルな料金プラン</h3>
+                <div class="space-y-6">
+                    <div class="p-6 bg-gradient-to-br from-gray-50 to-slate-50 rounded-xl border border-gray-200">
+                        <p class="text-lg font-semibold text-gray-900 mb-2">30分（ブロックプログラミング）</p>
+                        <p class="text-4xl font-bold text-gray-900">¥10,000</p>
+                        <p class="text-sm text-gray-600 mt-2">/ 月 (4レッスン)</p>
                     </div>
-                    <div class="p-8 bg-green-50 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
-                        <span class="text-4xl">🌎</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">外国人英語講師</h3>
-                        <p class="text-gray-600">日本語をほぼ離せない講師の元でプログラミングを学ぶことでおのずと英語、コミュニーケーション能力が培われます。</p>
-                    </div>
-                    <div class="p-8 bg-indigo-50 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-500">
-                        <span class="text-4xl">🧠</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-gray-900">プライベートレッスン</h3>
-                        <p class="text-gray-600">グループではなく個人でレッスンをすることで、お子様の学ぶ速度に合わせて学習ができます。</p>
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border-2 border-blue-300 shadow-md">
+                        <p class="text-lg font-semibold text-gray-900 mb-2">1時間（Python・Web）</p>
+                        <p class="text-4xl font-bold text-blue-600">¥20,000</p>
+                        <p class="text-sm text-gray-600 mt-2">/ 月 (4レッスン)</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="courses" class="py-20 bg-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-center text-4xl font-extrabold text-gray-900 mb-16">コース概要</h2>
-                <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 border-t-8 border-yellow-500">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-yellow-600 text-center">ブロックプログラミング</h3>
-                            <h4 class="text-2xl font-bold text-yellow-600 text-center">(対象年齢 5-9歳)</h4>
-                            <p class="mt-2 text-gray-600">最初のステップに最適。SCRATCHをというツールを使って、簡単なPC操作（ドラッグ＆ドロップ）で対話型ストーリーやゲームを制作します。</p>
-                            <ul class="mt-4 text-sm text-gray-500 space-y-2">
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>タイピング不要</li>
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>基本的な論理に集中</li>
-                            </ul>
-                        
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 border-t-8 border-indigo-600">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-indigo-600 text-center">Python基礎</h3>
-                            <h4 class="text-2xl font-bold text-indigo-600 text-center">(対象年齢 10-16歳)</h4>
-                            <p class="mt-2 text-gray-600">世界で最も人気のある言語。ゲームの作成、データ分析ツール、シンプルな機械学習モデルを構築します。</p>
-                            <ul class="mt-4 text-sm text-gray-500 space-y-2">
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>実践的なテキストコーディング</li>
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>中級レベルの概念</li>
-                            </ul>
-                            
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500 border-t-8 border-green-500">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-green-600 text-center">Webページ作成</h3>
-                            <h4 class="text-2xl font-bold text-green-600 text-center">(対象年齢 10-16歳)</h4>
-                            <p class="mt-2 text-gray-600">JavaScript,HTML、CSSなどの言語を使用しウェブサイトを作成、サーバー上に実装します。</p>
-                            <ul class="mt-4 text-sm text-gray-500 space-y-2">
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>フルスタックの基礎</li>
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 14.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>ポートフォリオにできるプロジェクト</li>
-                            </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="tutors" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-12">講師紹介</h2>
-                <div class="flex justify-center">
-                    <div class="p-6 bg-gray-50 rounded-2xl shadow-lg border-b-4 border-indigo-400 max-w-sm w-full">
-                        <img class="w-24 h-24 mx-auto rounded-full object-cover mb-4 shadow-lg border-2 border-indigo-400" src="miamor.jpg" alt="アレックス P. 先生のプロフィール画像" onerror="this.onerror=null;this.src='https://placehold.co/96x96/9ca3af/ffffff?text=A'">
-                        <h3 class="text-xl font-bold text-gray-900">パオラ先生</h3>
-                        <p class="text-indigo-600 font-medium">Python, JavaScriptなど専門</p>
-                        <p class="mt-3 text-sm text-gray-600">コロンビアで物理・教育学の学位を取得後、約3年ほどプログラミングの教師として勤務。アメリカには2年ほど在住経験あり</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="schedule" class="py-20 bg-indigo-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-center text-4xl font-extrabold text-gray-900 mb-16">スケジュール料金設定</h2>
-                <div class="flex flex-col lg:flex-row gap-10">
-                    <div class="lg:w-1/2 p-8 bg-white rounded-2xl shadow-xl">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-4">柔軟な授業時間</h3>
-                        <ul class="space-y-4 text-gray-600">
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 font-extrabold text-xl mr-3">&gt;</span>
-                                <div>
-                                    <p class="font-bold text-2xl">ブロックプログラミング (対象年齢 5-9歳)</p>
-                                    <p class="text-2l">4:00 PM - 7:00 PM（月－金）30分</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-indigo-600 font-extrabold text-xl mr-3">&gt;</span>
-                                <div>
-                                    <p class="font-bold text-2xl">Python基礎→応用・Webページ作成(対象年齢 10-16歳)</p>
-                                    <p class="text-2l">4:00 PM - 7:00 PM （月－金）1時間</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="lg:w-1/2 p-8 bg-white rounded-2xl shadow-xl border-t-8 border-green-500">
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">シンプルな料金プラン</h3>
-                        <div class="space-y-4">
-                            <div class="border-b pb-3">
-                                <p class="text-xl font-bold text-gray-800">30分（ブロックプログラミング ）</p>
-                                <p class="text-3xl font-extrabold text-green-600">¥10,000 <span class="text-lg font-normal text-gray-500">/ 月 (4レッスン)</span></p>
-                            </div>
-                            <div class="border-b pb-3 bg-green-50 p-4 rounded-lg shadow-inner">
-                                <p class="text-xl font-bold text-gray-800">1時間（Python基礎→応用・Webページ作成）</p>
-                                <p class="text-3xl font-extrabold text-green-600">¥20,000 <span class="text-lg font-normal text-gray-500">/ 月 (4レッスン)</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="#contact" class="inline-block px-8 py-4 text-xl font-bold text-white bg-indigo-600 rounded-xl hover:bg-indigo-700 transition duration-300 shadow-xl shadow-indigo-300/50"> 無料体験レッスンから始めましょう！ </a>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="py-20 bg-white">
+        </div>
+        
+        <div class="text-center">
+            <a href="#contact" class="inline-block px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                無料体験レッスンから始めましょう！
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+ <section id="contact" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-center text-4xl font-extrabold text-gray-900 mb-12">まずはお問い合わせください</h2>
                 <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-3xl shadow-2xl border-t-4 border-yellow-500">
